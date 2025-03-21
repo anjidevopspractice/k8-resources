@@ -1,0 +1,12 @@
+apiversion: v1
+kind: multiple-containers
+metadata: 
+  name: multicontainer
+spec:
+- name: nginx
+  image: nginx
+  ports:
+  - containerport: 80
+- name: alamalinux
+  image: alamalinux:8
+  command: ["sleep","300"]
